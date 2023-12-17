@@ -1,0 +1,120 @@
+@font-face {
+    font-family: rajdhani;
+    src: url(fonts/Rajdhani-Bold.ttf);
+}
+body, html{
+    color: blueviolet;
+    height: 99%;
+    background-color: rgb(49, 49, 49);
+    font-family: rajdhani;
+}
+
+li{
+    list-style-type: none;   
+}
+
+.container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-areas: 
+        "sidebar navbar navbar"
+        "sidebar article sidebar2"
+        "sidebar article sidebar2"
+    ;
+    gap: 10px;
+}
+
+.container > div {
+    border: 1px solid blueviolet;
+    border-radius: 30px;
+    background-color: black;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+.sidebar2{
+    grid-area: sidebar2;
+}
+
+.article{
+    grid-area: article;
+    text-align: center;
+    height: 1fr;
+    width: 1fr;
+}
+
+.sidebar_naslov{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.sidebar_naslov > svg{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.sidebar_prva_lista{
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.sidebar_prva_lista > ul{
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.sidebar_prva_lista > ul > li {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar_prva_lista > ul > li > svg {
+    align-self: center;
+    margin-right: 10px;
+}
+
+.sidebar_druga_lista{
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.sidebar_druga_lista > ul{
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.sidebar_druga_lista > ul > li {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar_druga_lista > ul > li > svg {
+    align-self: center;
+    margin-right: 10px;
+}
+
+.article > .projekti {
+    height: 85%;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    margin: 20px;
+}
+
+.article > .projekti > div{
+    border: 1px solid greenyellow;
+    background-color: rgb(9, 9, 61);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
