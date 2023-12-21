@@ -1,0 +1,21 @@
+*{
+    background-color: grey;
+    text-align: center;
+    list-style: none;
+}
+
+h1, h2 {
+    color: blue;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li{
+    padding: 5px;
+
+}
+
