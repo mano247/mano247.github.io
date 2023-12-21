@@ -207,6 +207,7 @@ li{
 
 .navbar_gornja_linija > input {
     height: 20px;
+    border-color: purple;
 }
 
 .navbar_donja_linija > button {
@@ -216,6 +217,9 @@ li{
     width: 90px;
     height: 30px;
     cursor:pointer;
+    font-weight: bold;
+    font-size: 80%;
+    border-color: purple;
 }
 
 .navbar_donja_linija > p{
