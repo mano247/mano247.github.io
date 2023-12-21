@@ -4,9 +4,15 @@
 }
 body, html{
     color: blueviolet;
-    height: 99%;
+    height: 100%;
     background-color: rgb(49, 49, 49);
     font-family: rajdhani;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-decoration: underline;
+    color: chocolate;
+    cursor:pointer;
 }
 
 li{
@@ -21,7 +27,7 @@ li{
     grid-template-areas: 
         "sidebar navbar navbar"
         "sidebar article sidebar2"
-        "sidebar article sidebar2"
+        "sidebar article trending"
     ;
     gap: 10px;
 }
@@ -32,16 +38,33 @@ li{
     background-color: black;
 }
 
+
 .sidebar{
     grid-area: sidebar;
+    font-size: 120%;
+}
+
+.sidebar2_trending{
+    grid-area: trending;
+    text-align: center;
 }
 
 .navbar{
     grid-area: navbar;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "gore"
+        "dole"
+    ;
+    font-size: 130%;
 }
 
 .sidebar2{
     grid-area: sidebar2;
+    display: grid;
+    text-align: center;
+    align-items: center;
 }
 
 .article{
@@ -60,6 +83,7 @@ li{
 .sidebar_naslov > svg{
     margin-left: auto;
     margin-right: 20px;
+    cursor:pointer;
 }
 
 .sidebar_prva_lista{
@@ -75,11 +99,13 @@ li{
 .sidebar_prva_lista > ul > li {
     display: flex;
     flex-direction: row;
+    cursor:pointer;
 }
 
 .sidebar_prva_lista > ul > li > svg {
     align-self: center;
     margin-right: 10px;
+    cursor:pointer;
 }
 
 .sidebar_druga_lista{
@@ -95,11 +121,13 @@ li{
 .sidebar_druga_lista > ul > li {
     display: flex;
     flex-direction: row;
+    cursor:pointer;
 }
 
 .sidebar_druga_lista > ul > li > svg {
     align-self: center;
     margin-right: 10px;
+    cursor:pointer;
 }
 
 .article > .projekti {
@@ -112,9 +140,96 @@ li{
 }
 
 .article > .projekti > div{
+    display: grid;
     border: 1px solid greenyellow;
     background-color: rgb(9, 9, 61);
     border-radius: 20px;
     height: 100%;
     width: 100%;
+}
+
+.article > .projekti > div > .ikonice {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.article > .projekti > div > .ikonice > svg {
+    margin: 5px;
+    cursor:pointer;
+}
+
+.navbar_gornja_linija{
+    height: 50%;
+    grid-area: gore;
+    display: grid;
+    grid-template-columns: 0.07fr auto  0.1fr 0.02fr 0.1fr;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.navbar_gornja_linija > label {
+    justify-self: end;
+    cursor:pointer;
+}
+.navbar_gornja_linija > input {
+    margin-left: 10px;
+    justify-self: start;
+    border-radius: 10px;
+    background-color: gray;
+    color: purple;
+}
+
+.navbar_gornja_linija > svg {
+    justify-self: end;
+    cursor:pointer;
+}
+
+.navbar_gornja_linija > p {
+    justify-self: start;
+    margin-left: 10px;
+}
+
+
+.navbar_donja_linija{
+    height: 50%;
+    grid-area: dole;
+    display: grid;
+    grid-template-columns: 0.08fr 0.07fr auto 0.1fr 0.05fr 0.1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.navbar_donja_linija > svg {
+    justify-self: end;
+    cursor:pointer;
+}
+
+.navbar_gornja_linija > input {
+    height: 20px;
+}
+
+.navbar_donja_linija > button {
+    border-radius: 10px;
+    background-color: gray;
+    color: purple;
+    width: 90px;
+    height: 30px;
+    cursor:pointer;
+}
+
+.navbar_donja_linija > p{
+    justify-self: start;
+    margin-left: 10px;
+}
+
+.sidebar2_trending > div > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sidebar2_trending > div > div > svg, p {
+    margin-left: 20px;
+    cursor:pointer;
 }
